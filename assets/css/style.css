@@ -443,49 +443,51 @@ header {
 }
 
 /* ============ FOOTER =========== */
- .footer {
+.footer {
     background-color: var(--color-bg1);
     padding-top: 5rem;
     font-size: 0.9rem;
- }
+}
 
- .footer_container{
+.footer_container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 5rem;
- }
+}
 
- .footer_container > div h4{
+.footer_container>div h4 {
     margin-bottom: 1.2rem;
- }
+}
 
- .footer_logo_text_box {
+.footer_logo_text_box {
     margin: 0 0 2rem;
- }
+}
 
- .footer ul li{
+.footer ul li {
     margin-bottom: 0.7rem;
- }
+}
 
- .footer a{
+.footer a {
     transition: 0.4s;
     display: inline-block;
- }
- .footer a:hover{
+}
+
+.footer a:hover {
     color: var(--color-danger);
- text-decoration: underline;
- transform: translateX(0.5rem);
- }
- .social_list{
+    text-decoration: underline;
+    transform: translateX(0.5rem);
+}
+
+.social_list {
     display: flex;
     gap: 1rem;
     font-size: 1.2rem;
     margin-top: 2rem;
- }
+}
 
- .footer__copywrite{
+.footer__copywrite {
     text-align: center;
     margin-top: 4rem;
     padding: 1.2rem 0;
     border-top: 1px solid var(--color-bg2);
- }
+}
