@@ -47,6 +47,7 @@ body {
     line-height: 1.7;
     color: var(--color-white);
     background-color: var(--color-bg);
+    background-image: url(../images/bg-texture.png);
 }
 
 .container {
@@ -172,7 +173,7 @@ nav button {
 }
 
 .nav__menu a:hover {
-    color: var(--color-bg2);
+    color: var( --color-light);
 }
 
 /* =========== HEADER ===========*/
@@ -312,15 +313,13 @@ header {
 
 /* <!-- ========== FAQS =========== --> */
 
-.faqs {
-    background-color: var(--color-bg1);
-    box-shadow: inset 0 0 3rem rgba(0, 0, 0, 0.5);
-}
 
 .faqs__container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 1rem;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
 }
 
 .faq {
@@ -490,4 +489,108 @@ header {
     margin-top: 4rem;
     padding: 1.2rem 0;
     border-top: 1px solid var(--color-bg2);
+}
+
+/* =============== MEDIA QUERIES (TABLETS) =============== */
+
+@media screen and (max-width: 1024px) {
+    .container{
+        width:  var(--container-width-md);
+    }
+
+    h1{
+        font-size: 2.2rem;
+    }
+
+    h2{
+        font-size: 1.7rem;
+    }
+
+    h3{
+        font-size: 1.4rem;
+    }
+
+    h4{
+        font-size: 1.2rem;
+    }
+
+    /* ====== NAVBAR ====== */
+    nav button{
+        position: absolute;
+        display: inline-block;
+        background: transparent;
+        font-size: 1.8rem;
+        color: var(--color-white);
+        cursor: pointer;
+        right: 5rem;
+    }
+
+    nav button#close-menu-btn{
+        display: none;
+    }
+
+    .nav__menu{
+        position: fixed;
+        top: 5rem;
+        right: 5%;
+        height: fit-content;
+        width: 18rem;
+        flex-direction: column;
+        gap: 0;
+        display: none;
+    }
+
+    .nav__menu li{
+        width: 100%;
+        height: 5.8rem;
+        animation: animateNavItems 400ms linear forwards;
+        transform-origin: top right;
+        opacity: 0;
+    }
+    .nav__menu li:nth-child(2){
+        animation-delay: 200ms;
+    }
+    .nav__menu li:nth-child(3){
+        animation-delay: 400ms;
+    }
+    .nav__menu li:nth-child(4){
+        animation-delay: 600ms;
+    }
+
+ @keyframes animateNavItems{
+    0%{
+        transform: rotateZ(-90deg) rotateX(90deg) scale(0.1);
+        /* transform: translateX(90%) rotateZ(-90deg) rotateX(90deg) scale(0.1); */
+    }
+    100%{
+        transform: rotateZ(0) rotateX(0) scale(1);
+        /* transform: translateX(0)  rotateZ(0) rotateX(0) scale(1); */
+        opacity: 1;
+    }
+ }
+    .nav__menu li a{
+        background: var(--color-primary);
+        box-shadow: -4rem 6rem 10rem rgba(0, 0, 0, 0.6);
+        width: 100%;
+        height: 100%;
+        display: grid;
+        place-items: center;
+    }
+
+    .nav__menu li a:hover{
+        background: var(--color-bg2);
+        color: var(--color-white);
+    }
+
+    .show-menu{
+        display: flex;
+    }
+
+    .show-Btn#close-menu-btn{
+        display: inline-flex;
+    }
+
+    .show-menuBtn#open-menu-btn{
+        display: none;
+    }
 }
