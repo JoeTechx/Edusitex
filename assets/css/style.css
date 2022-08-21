@@ -173,7 +173,7 @@ nav button {
 }
 
 .nav__menu a:hover {
-    color: var( --color-light);
+    color: var(--color-light);
 }
 
 /* =========== HEADER ===========*/
@@ -494,28 +494,28 @@ header {
 /* =============== MEDIA QUERIES (TABLETS) =============== */
 
 @media screen and (max-width: 1024px) {
-    .container{
-        width:  var(--container-width-md);
+    .container {
+        width: var(--container-width-md);
     }
 
-    h1{
+    h1 {
         font-size: 2.2rem;
     }
 
-    h2{
+    h2 {
         font-size: 1.7rem;
     }
 
-    h3{
+    h3 {
         font-size: 1.4rem;
     }
 
-    h4{
+    h4 {
         font-size: 1.2rem;
     }
 
     /* ====== NAVBAR ====== */
-    nav button{
+    nav button {
         position: absolute;
         display: inline-block;
         background: transparent;
@@ -525,11 +525,11 @@ header {
         right: 5rem;
     }
 
-    nav button#close-menu-btn{
+    nav button#close-menu-btn {
         display: none;
     }
 
-    .nav__menu{
+    .nav__menu {
         position: fixed;
         top: 5rem;
         right: 5%;
@@ -540,35 +540,40 @@ header {
         display: none;
     }
 
-    .nav__menu li{
+    .nav__menu li {
         width: 100%;
         height: 5.8rem;
         animation: animateNavItems 400ms linear forwards;
         transform-origin: top right;
         opacity: 0;
     }
-    .nav__menu li:nth-child(2){
+
+    .nav__menu li:nth-child(2) {
         animation-delay: 200ms;
     }
-    .nav__menu li:nth-child(3){
+
+    .nav__menu li:nth-child(3) {
         animation-delay: 400ms;
     }
-    .nav__menu li:nth-child(4){
+
+    .nav__menu li:nth-child(4) {
         animation-delay: 600ms;
     }
 
- @keyframes animateNavItems{
-    0%{
-        transform: rotateZ(-90deg) rotateX(-90deg) scale(0.1);
-        /* transform: translateX(90%) rotateZ(-90deg) rotateX(90deg) scale(0.1); */
+    @keyframes animateNavItems {
+        0% {
+            transform: rotateZ(-90deg) rotateX(-90deg) scale(0.1);
+            /* transform: translateX(90%) rotateZ(-90deg) rotateX(90deg) scale(0.1); */
+        }
+
+        100% {
+            transform: rotateZ(0) rotateX(0) scale(1);
+            /* transform: translateX(0)  rotateZ(0) rotateX(0) scale(1); */
+            opacity: 1;
+        }
     }
-    100%{
-        transform: rotateZ(0) rotateX(0) scale(1);
-        /* transform: translateX(0)  rotateZ(0) rotateX(0) scale(1); */
-        opacity: 1;
-    }
- }
-    .nav__menu li a{
+
+    .nav__menu li a {
         background: var(--color-primary);
         box-shadow: -4rem 6rem 10rem rgba(0, 0, 0, 0.6);
         width: 100%;
@@ -577,20 +582,92 @@ header {
         place-items: center;
     }
 
-    .nav__menu li a:hover{
+    .nav__menu li a:hover {
         background: var(--color-bg2);
         color: var(--color-white);
     }
 
-    .show-menu{
+    .show-menu {
         display: flex;
     }
 
-    .show-Btn#close-menu-btn{
+    .show-Btn#close-menu-btn {
         display: inline-flex;
     }
 
-    .show-menuBtn#open-menu-btn{
+    .show-menuBtn#open-menu-btn {
         display: none;
     }
-}
+
+    /* ===== header ========= */
+
+    header{
+        height: 82vh;
+        margin-bottom: 4rem;
+    }
+
+    .header__container{
+        gap: 0;
+        padding-bottom: 3rem;
+    }
+ /* ========= categories ========= */
+
+    .categories{
+        height: auto;
+        /* margin-top: 15rem; */
+    }
+    .categories__container{
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .categories__left{
+        margin-right: 0;
+    }
+
+     /* ========= popular courses ========= */
+     .courses{
+        padding-top: 0;
+     }
+
+        .courses__container{
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .course:nth-child(3){
+            margin: auto;
+            grid-column: span 2;
+            width: 50%;
+        }
+
+           /* ========= FAQS ========= */
+        .faqs__container{
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .faq__header h4{
+            font-size: 0.8rem;
+        }
+        .arrow_down {
+            margin-left: auto;
+          }
+
+                 /* ========= FOOTER ========= */
+
+                 .footer_container {
+                    grid-template-columns: repeat(3, 1fr);
+                    align-items: flex-end;
+                  }
+
+                  .footer_content{
+                 margin:auto;
+                    align-items: flex-end;
+                    text-align: center;
+                  }
+                 .footer_content:nth-child(1) {
+                    grid-column: span 4;
+                text-align: center;
+                margin:auto;
+                 }
+           
+    }

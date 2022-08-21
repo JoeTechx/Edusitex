@@ -70,15 +70,15 @@ const menu = document.querySelector(".nav__menu");
 const menuBtn = document.getElementById("open-menu-btn");
 const closeBtn = document.getElementById("close-menu-btn");
 
-if (menuBtn) { 
+if (menuBtn) {
     menuBtn.addEventListener("click", () => {
         menu.classList.add("show-menu");
         closeBtn.classList.add("show-Btn");
         menuBtn.classList.add("show-menuBtn");
     });
- }
+}
 
-if (closeBtn) { 
+if (closeBtn) {
     closeBtn.addEventListener("click", () => {
         menu.classList.remove("show-menu");
         closeBtn.classList.remove("show-Btn");
