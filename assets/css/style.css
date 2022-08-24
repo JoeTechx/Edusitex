@@ -676,104 +676,130 @@ header {
 
 /* ========= MEDIA QUERIES (PHONES) =========== */
 @media screen and (max-width: 600px) {
-    
+  .container {
+    width: var(--container-width-sm);
+  }
 
-.container{
-width: var(--container-width-sm);
-}
-
-/* ======= navbar ======== */
-.nav__menu{
+  /* ======= navbar ======== */
+  .nav__menu {
     right: 3%;
-}
+  }
 
-/* ======= header ======== */
-header{
+  /* ======= header ======== */
+  header {
     height: 150vh;
-}
+  }
 
-.header__container{
+  .header__container {
     grid-template-columns: 1fr;
     align-items: center;
     text-align: center;
     margin-top: 2rem;
-}
+  }
 
-.header__left p{
+  .header__left p {
     margin-bottom: 1.3rem;
-}
+  }
 
-/* ======= categories ======== */
-.categories__right{
+  /* ======= categories ======== */
+  .categories__right {
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
-}
-.category{
+  }
+  .category {
     padding: 2rem;
-}
-.category__icon{
+  }
+  .category__icon {
     margin-top: 0.25rem;
-}
-.category:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0.5rem 1rem rgba(179, 177, 192, 0.3);
-  z-index: 1;
+  }
+  .category:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0.5rem 1rem rgba(179, 177, 192, 0.3);
+    z-index: 1;
+  }
+
+  /* ======= popular courses ======== */
+  .courses__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .course:nth-child(3) {
+    margin: auto;
+    width: 82%;
+  }
+  .course {
+    width: 80%;
+    margin: auto;
+  }
+
+  /* ======= FAQS ======== */
+  .faqs__container {
+    grid-template-columns: 1fr;
+  }
+
+  .faq {
+    display: block;
+  }
+
+  .faq__header h4 {
+    font-size: 1rem;
+  }
+
+  .question__answer {
+    padding-left: 1rem;
+  }
+
+  /* ======= FOOTER ======== */
+
+  .footer_content:nth-child(1) {
+    grid-column: span 1;
+    text-align: center;
+    margin: auto;
+  }
+  .footer_container {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 2rem;
+  }
+  .footer-desc {
+    margin: 1rem auto;
+  }
+  .social_list {
+    justify-content: center;
+  }
+
+  .footer__copywrite {
+    font-size: large;
+  }
 }
 
-/* ======= popular courses ======== */
-.courses__container{
-  display: flex;
-  flex-direction: column;
-}
+@media screen and (max-width: 400px) {
+  .categories__left {
+    text-align: center;
+  }
 
-.course:nth-child(3) {
-  margin: auto;
-  width: 82%;
-}
-.course{
-width: 80%;
-margin: auto;
-}
+  .categories__right {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
 
+  .category {
+    padding: 2rem;
+    text-align: center;
+  }
 
-/* ======= FAQS ======== */
-.faqs__container {
-  grid-template-columns: 1fr;
-}
+  .course {
+    width: 95%;
+    margin: auto;
+  }
 
-.faq {
-  display: block;
-}
+  .course:nth-child(3) {
+    margin: auto;
+    width: 95%;
+  }
 
-.faq__header h4 {
-  font-size: 1rem;
-}
-
-.question__answer {
-  padding-left: 1rem;
-}
-
-/* ======= FOOTER ======== */
-
-
-.footer_content:nth-child(1) {
-  grid-column: span 1;
-  text-align: center;
-  margin: auto;
-}
-.footer_container{
-grid-template-columns: 1fr;
-text-align: center;
-gap: 2rem;
-}
- .footer-desc{
-margin: 1rem auto;
- }
-.social_list {
-  justify-content: center;
-}
-
-.footer__copywrite {
-  font-size: large;
-}
+  .faq__header h4 {
+    font-size: 0.8rem;
+  }
 }
