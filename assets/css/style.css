@@ -525,7 +525,7 @@ header {
     font-size: 1.8rem;
     color: var(--color-white);
     cursor: pointer;
-    right: 1rem;
+    right: 2rem;
   }
 
   nav button#close-menu-btn {
