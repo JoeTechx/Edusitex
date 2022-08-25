@@ -118,6 +118,10 @@
   right: 0;
 }
 
+
+.team__member:hover .team__member-image img  {
+	filter: saturate(1);
+}
 /* ============= MEDIA QUERIES (TABLETS) ============== */
 
 @media screen and (max-width: 1024px) {
@@ -147,4 +151,27 @@
     font-weight: 600;
     font-size: 0.9rem;
   }
+}
+
+/* ============= MEDIA QUERIES (TABLETS) ============== */
+
+@media screen and (max-width: 600px) {
+.achievements__cards{
+  grid-template-columns: 1fr 1fr;
+  gap: 0.8rem;
+}
+
+.team__container{
+  grid-template-columns: 1fr 1fr;
+  gap: 0.9rem;
+}
+
+.team__member{
+  padding: 0;
+  border: 0.3rem solid var(--color-primary);
+}
+
+.team__member p{
+  margin-bottom: 1.5rem;
+}
 }

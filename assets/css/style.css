@@ -671,6 +671,7 @@ header {
     grid-column: span 4;
     text-align: center;
     margin: auto;
+    width: 82%;
   }
 }
 
