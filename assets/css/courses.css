@@ -1,0 +1,28 @@
+
+@media screen and (max-width: 1024px) {
+.courses {
+    padding-top: 0;
+  }
+
+  .courses__container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+.course:nth-child(3) {
+    margin: auto;
+     grid-column: span 1;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .course:nth-child(3) {
+    width: 82%;
+}
+}
+
+@media screen and (max-width: 400px) {
+  .course:nth-child(3) {
+    width: 82%;
+}
+}
