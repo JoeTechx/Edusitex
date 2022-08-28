@@ -174,3 +174,10 @@
     margin-bottom: 1.5rem;
   }
 }
+
+@media screen and (max-width: 400px) {
+  .achieve_title, .achieve_desc {
+text-align: center;
+  }
+
+}

@@ -203,7 +203,37 @@ header {
 .header__left p {
   margin: 1rem 0 2.4rem;
 }
+.home-scroll {
+  width: 8.86rem;
+  margin-bottom: 7rem;
+}
 
+.home-scroll-button {
+  color: var(--color-light);
+  transition: 0.3s;
+  margin: auto;
+  display: flex;
+  align-items: center;
+}
+
+.home-scroll-button:hover{
+  transform: translateY(0.25rem);
+}
+
+.home-scroll-mouse {
+  font-size: 2rem;
+}
+
+.home-scroll-button-name {
+  font-size: 0.813rem;
+  color: var(--color-light);
+  font-weight:500;
+  margin-right: 0.25rem;
+}
+
+.home-scroll-arrow {
+  font-size: 1.25rem;
+}
 /* =========== CATEGORIES ===========*/
 
 .categories {
@@ -367,7 +397,7 @@ header {
   font-size: 1rem;
   padding: 0.3rem;
   border-radius: 4px;
-  transition: 0.7s;
+  transition: var(--transition);
 }
 
 .question__answer {
@@ -382,6 +412,7 @@ header {
   margin-top: 0.8rem;
   font-size: 0.9rem;
   line-height: 1.6;
+  transition: max-height 900ms ease;
 }
 
 .faq.open .question__answer {
@@ -499,6 +530,34 @@ header {
   padding: 1.2rem 0;
   border-top: 1px solid var(--color-bg2);
 }
+
+.scroll_up {
+  position: fixed;
+  bottom: 2rem;
+  right: -100%;
+  background-color: #fff;
+  border-radius: 4px;
+  transition: var(--transition);
+  z-index: 100;
+}
+
+.scroll_up i {
+  padding: 0.3rem;
+  font-size: 1.25rem;
+  color: var(--color-bg2);
+  transition: 0.4s;
+}
+
+.scroll_up i:hover{
+  color: var(--color-danger);
+}
+.show_scrollup{
+  right: 2rem;
+}
+.scroll_up:active{
+  background-color: var(--color-light);
+}
+
 
 /* =============== MEDIA QUERIES (TABLETS) =============== */
 
@@ -706,6 +765,11 @@ header {
 
   .header__left p {
     margin-bottom: 1.3rem;
+  }
+
+  .home-scroll {
+    margin: 0 auto;
+ justify-content: center;
   }
 
   /* ======= categories ======== */

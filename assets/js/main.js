@@ -85,3 +85,27 @@ if (closeBtn) {
     menuBtn.classList.remove("show-menuBtn");
   });
 }
+
+
+
+
+// const scrollUp = document.querySelector(".scroll_up");
+// const scrollTop = () => {
+// 	this.scrollY > 100
+// 		? scrollUp.classList.add("show_scrollup")
+// 		: scrollUp.classList.remove("show_scrollup");
+// };
+// window.addEventListener("scroll", scrollTop);
+
+const scrollUp = document.querySelector(".scroll_up");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 590){
+    scrollUp.classList.add("show_scrollup");
+  } else{
+    scrollUp.classList.remove("show_scrollup");
+  }
+})
+
+
+
