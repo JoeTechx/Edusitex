@@ -103,8 +103,8 @@ img {
   display: inline-block;
   background-color: var(--color-white);
   color: var(--color-black);
-  padding: 1rem 2rem;
-  border: 1px solid transparent;
+  padding: 0.6rem 1rem;
+  border: 2px solid transparent;
   font-weight: 500;
   transition: var(--transition);
 }
@@ -118,8 +118,14 @@ img {
 .btn-primary {
   background-color: var(--color-danger);
   color: var(--color-white);
+  border: 2px solid transparent;
 }
 
+.btn-primary:hover {
+  background-color: transparent;
+  color: var(--color-white);
+  border-color: var(--color-danger);
+}
 .bx {
   font-family: boxicons !important;
   font-weight: 400;
