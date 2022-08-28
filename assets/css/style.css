@@ -22,6 +22,8 @@
   --color-bg: #1f2641;
   --color-bg1: #2e3267;
   --color-bg2: #424890;
+  --scroll-bar-color: #7a8da8;
+  --scroll-thumb-color: #4b7cf7;
 
   --container-width-lg: 80%;
   --container-width-md: 90%;
@@ -558,7 +560,21 @@ header {
   background-color: var(--color-light);
 }
 
+/*========== SCROLL BAR ==========*/
+::-webkit-scrollbar {
+  width: 0.6rem;
+  background-color: var(--scroll-bar-color);
+  border-radius: 0.5rem;
+}
 
+::-webkit-scrollbar-thumb {
+  background-color: var(--scroll-thumb-color);
+  border-radius: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-light);
+}
 /* =============== MEDIA QUERIES (TABLETS) =============== */
 
 @media screen and (max-width: 1024px) {

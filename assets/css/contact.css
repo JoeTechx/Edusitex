@@ -5,7 +5,7 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 4rem;
   height: auto;
-  margin: 1rem auto;
+  margin: auto;
   border-radius: 1rem;
 }
 .contact__aside {
@@ -61,12 +61,12 @@
 }
 /* ======= FORM ========== */
 
-.contact_form {
+.contact__form {
   padding: 4rem 2rem 3rem;
   display: flex;
   flex-direction: column;
   /* gap: 1.75rem; */
-  background-color: var(--color-bg2);
+  /* background-color: var(--color-bg2); */
   position: relative;
   border-radius: 14px;
   top: 0;
@@ -86,7 +86,7 @@
   color: #fff;
   outline: none;
   box-shadow: 0 0 5px rgb(0 0 0 / 80%);
-  margin: 0.9rem 0;
+  margin: 0.9rem auto;
 }
 
 textarea {
@@ -119,6 +119,14 @@ textarea {
 
 @media screen and (max-width: 850px) {
   .contact__container {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 400px){
+  .contact__container {
+padding: 0;
   }
 }
